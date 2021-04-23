@@ -1,2 +1,3 @@
 # neovim_conf
-Neovim init file
+
+Init File for neovim 
