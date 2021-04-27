@@ -18,6 +18,22 @@ Plug 'zchee/deoplete-clang' " Deoplete Autocomplete for C/C++
 "Gruvbox for color scheme
 Plug 'morhetz/gruvbox'
 
+" Modified status bar with vim-airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes' " Mulitple Themes for the vim-airline status bar
+
+" Bracket close and open
+Plug 'jiangmiao/auto-pairs'
+
+"Auto format code
+Plug 'sbdchd/neoformat'
+
+"Async Lint Engine for syntax and semantic checking
+Plug 'dense-analysis/ale'
+
+"Multi line comment plugin
+Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 " Some Preferences for Jedi-Vim
@@ -34,7 +50,6 @@ let g:SuperTabDefaultCompletionType = "<c-n>" " SuperTab Completion from top to 
 " Deoplete C setup
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-10/lib/libclang.so.1'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm-10/lib/clang'
-
 " Color Preferences
 colorscheme gruvbox
 set background=dark
@@ -42,4 +57,11 @@ set background=dark
 " Set numbering for nvim 
 set number
 
+" Vim-airline theme set
+let g:airline_theme='simple' " <theme> is a valid theme name
 
+"Set linting style for ALE python
+let g:ale_linters = {'python': ['pylint']}
+
+"Set python for use with conda environments
+"let g:python3_host_prog = 'python3'
